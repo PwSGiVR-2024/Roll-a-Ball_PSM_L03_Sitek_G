@@ -33,6 +33,10 @@ public class MovementController : MonoBehaviour
         {
             rb.AddForce(Vector3.right * Thrust);
         }
+        if (Input.GetKey("space") && score>=10)
+        {
+            rb.AddForce(Vector3.up * Thrust);
+        }
     }
     public void points()
     {
@@ -40,7 +44,11 @@ public class MovementController : MonoBehaviour
         Debug.Log("Zdobyles punkt! Liczba zdobytych punktow: " + score);
         if (score == 9)
         {
-            print("Zdobyles wszystkie punkty!");
+            print("Przeszedles pierwszy poziom! Znajdz przycisk aby kontynuowac!");
+        }
+        if (score == 18)
+        {
+            print("Zdobyles wszystkie punkty! Gratuluje!");
         }
     }
 }
