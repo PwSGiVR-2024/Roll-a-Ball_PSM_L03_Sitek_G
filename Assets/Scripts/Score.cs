@@ -26,8 +26,8 @@ public class CollectScore : MonoBehaviour
     {
         if (player.score == 9)
         {
-            LVL_Pass.text = "Przeszedles pierwszy poziom! Znajdz przycisk aby kontynuowac!";
-        }
+            LVL_Pass.text = "Przeszedles pierwszy poziom! Przytrzymaj spacje aby skoczyc.";
+        }   
         if(player.score == 18)
         {
             END_GAME.text = "Zdobyles wszystkie punkty! Wygrales!";

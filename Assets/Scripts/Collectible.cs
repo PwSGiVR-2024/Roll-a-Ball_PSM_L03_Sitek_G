@@ -6,10 +6,11 @@ using static UnityEditor.PlayerSettings;
 
 public class Collectible : MonoBehaviour
 {
+    public AudioSource m_AudioSource;
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,10 +22,15 @@ public class Collectible : MonoBehaviour
     }
     private void OnTriggerEnter(Collider trigger)
     {
+        m_AudioSource.Play();
+        Invoke(nameof(deActivateObject), 0.1f);
         trigger.gameObject.GetComponent<MovementController>().points();
-        gameObject.SetActive(false);
-      
 
+
+      }
+    private void deActivateObject()
+    {
+        gameObject.SetActive(false);
     }
 }
     
