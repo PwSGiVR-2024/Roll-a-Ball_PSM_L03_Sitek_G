@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
+using System;
 
 public class Collectible : MonoBehaviour
 {
+    public event Action pickUp;
     public AudioSource m_AudioSource;
     // Start is called before the first frame update
     void Start()
@@ -22,9 +24,9 @@ public class Collectible : MonoBehaviour
     }
     private void OnTriggerEnter(Collider trigger)
     {
+        pickUp?.Invoke();
         m_AudioSource.Play();
         Invoke(nameof(deActivateObject), 0.1f);
-        trigger.gameObject.GetComponent<MovementController>().points();
 
 
       }
