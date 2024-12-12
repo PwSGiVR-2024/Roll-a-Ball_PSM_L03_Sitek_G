@@ -211,11 +211,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6428436476512586118, guid: 07f540450b6480148b673003cd2ae443, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8458956528389449778, guid: 07f540450b6480148b673003cd2ae443, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 17928612}
   m_SourcePrefab: {fileID: 100100000, guid: 07f540450b6480148b673003cd2ae443, type: 3}
+--- !u!1 &17928611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8458956528389449778, guid: 07f540450b6480148b673003cd2ae443, type: 3}
+  m_PrefabInstance: {fileID: 17928610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &17928612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17928611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f2c1330f649164d8e712ab23feaf5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  LVL_Pass: {fileID: 0}
+  collectibles: []
 --- !u!1 &29181019
 GameObject:
   m_ObjectHideFlags: 0
