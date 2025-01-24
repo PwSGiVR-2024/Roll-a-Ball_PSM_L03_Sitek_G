@@ -22,10 +22,15 @@ public class GameManager : MonoBehaviour
     //Collectible
     public Collectible[] collectibles;
 
+    //Pauza
+ 
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+  
+        
         player = GameObject.Find("Player");
         scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
         LVL_Pass = GameObject.Find("Lvlcomp").GetComponent<TMP_Text>();
@@ -45,7 +50,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         if (score == maxScore)
         {
-            LVL_Pass.text = "Przeszedles poziom. Kliknij spacje aby skoczyc.";
+            LVL_Pass.text = "Przeszedles poziom. Zaraz zostaniesz przeniesiony dalej!!";
             Invoke(nameof(NextLvl), 4.0f);
         }
     }

@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class theme : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
         DontDestroyOnLoad(gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void StopMusic()
     {
-        
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
     }
+
 }

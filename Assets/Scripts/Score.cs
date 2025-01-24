@@ -13,15 +13,4 @@ public class CollectScore : MonoBehaviour
     public TMP_Text LVL_Pass;
     public MovementController player;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-   
-    }
-   
 }
